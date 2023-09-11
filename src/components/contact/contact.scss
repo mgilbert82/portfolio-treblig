@@ -1,0 +1,126 @@
+@import "../../app/globals.scss";
+
+.contact {
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 40px;
+            color: $maincolor;
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 80%;
+            height: 70%;
+            gap: 15px;
+
+
+            input {
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                background-color: $maincolor50;
+                border: none;
+                border-bottom: 1px solid $graycolor950;
+                padding: 10px;
+
+                &::placeholder {
+                    padding: 10px;
+                    color: $maincolor300;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include mobile {
+                    height: 20px;
+                }
+            }
+
+            textarea {
+                background-color: $maincolor50;
+                width: 300px;
+                height: 200px;
+                border: none;
+                border-bottom: 1px solid $graycolor950;
+                font-size: 14px;
+                padding: 10px;
+
+                &::placeholder {
+                    padding: 10px;
+                    color: $maincolor300;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 40px;
+                color: white;
+                font-weight: 500;
+                font-size: 18px;
+                font-family: "lato", sans-serif;
+                background-color: $maincolor;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include mobile {
+                    height: 30px;
+                }
+            }
+        }
+
+        span {
+            color: $maincolor700;
+            font-weight: 500;
+            font-family: "lato", sans-serif;
+            font-size: 24px;
+        }
+
+        @include mobile {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../app/globals.scss";
+
+.footer {
+    .socialmedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .link {
+            .icone {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .credits {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $maincolor;
+        color: white;
+
+        span {
+            padding: 5px;
+        }
+
+        hr {
+            width: 100%;
+        }
+    }
+
+}

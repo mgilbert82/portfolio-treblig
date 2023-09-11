@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap');
+$maincolor: #411207;
+$maincolor900: #722915;
+$maincolor700: #ab3d12;
+$maincolor500: #e98020;
+$maincolor300: #f2b757;
+$maincolor100: #fbeaca;
+$maincolor50: #fef7ec;
+$bluecolor: #009fd3;
+$yellowcolor: #fce98b;
+$browncolor: #d77f08;
+$pinkcolor: #f009b6;
+$greencolor: #05e260;
+$graycolor50: #f7f7f7;
+$graycolor200: #d9d9d9;
+$graycolor400: #adadad;
+$graycolor600: #888888;
+$graycolor800: #676767;
+$graycolor950: #363636;
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Advent Pro', sans-serif;
+}
