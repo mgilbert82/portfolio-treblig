@@ -23,6 +23,8 @@ export default function Intro() {
             width={600}
             height={600}
             className="img"
+            alt="img"
+            loading="lazy"
           />
         </div>
       </div>

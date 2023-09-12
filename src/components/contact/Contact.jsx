@@ -3,35 +3,93 @@ import "./contact.scss";
 import MailSent from "../../../public/images/mail-sent.png";
 import Image from "next/image";
 import { BsSend } from "react-icons/bs";
-export default function Contact() {
-  const [message, setMessage] = useState(false);
 
-  const handleSubmit = (e) => {
+export default function Contact() {
+  // Form Variables
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Message for the customer
+  const [formMessage, setFormMessage] = useState(false);
+
+  // Submit the form
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage(true);
+
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/send-email`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ username, email, message }),
+        }
+      );
+      if (res.ok) {
+        setSuccessMessage(
+          "Votre message a été envoyé avec succès 🚀"
+        );
+      } else {
+        setErrorMessage("Un incident est survenu 🤔!");
+      }
+    } catch (error) {
+      setErrorMessage("Un incident est survenu 🤔!");
+      console.error("Error sending email:", error);
+    }
   };
   return (
     <div className="contact" id="contact">
       <div className="left">
-        <Image src={MailSent} alt="" width={1024} height={763.1} />
+        <Image
+          src={MailSent}
+          alt="This is an image to describe a sending mail"
+          width={1024}
+          height={763.1}
+        />
       </div>
       <div className="right">
-        {!message ? <h2>Contact.</h2> : <h2>Thank you !</h2>}
-        {!message ? (
-          <form onSubmit={handleSubmit}>
-            <input type="email" placeholder="johndoe@mail.com" />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Hello my friend..."
-            ></textarea>
-            <button type="submit">
-              Send <BsSend />
-            </button>
-          </form>
-        ) : (
-          <span>You're message has been sended 🚀</span>
+        {errorMessage && <span>{errorMessage}</span>}
+        {!successMessage && (
+          <>
+            <form onSubmit={handleSubmit}>
+              <h2>Contact.</h2>
+
+              <input
+                type="text"
+                name="username"
+                placeholder="John Doe"
+                onChange={(e) => setUsername(e.target.value)}
+                required
+                value={username}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="johndoe@mail.com"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                value={email}
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Hello my friend..."
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+                required
+              ></textarea>
+              <button type="submit">
+                Send <BsSend />
+              </button>
+            </form>
+          </>
         )}
+        {successMessage && <span>{successMessage}</span>}
       </div>
     </div>
   );
