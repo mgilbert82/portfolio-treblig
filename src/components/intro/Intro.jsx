@@ -35,7 +35,7 @@ export default function Intro() {
           <h3>
             Freelance <span ref={textRef}></span>
           </h3>
-          <a href="#portfolio">
+          <a href="#about">
             <IoIosArrowDown size="40" className="icon" />
           </a>
         </div>

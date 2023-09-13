@@ -12,9 +12,6 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Message for the customer
-  const [formMessage, setFormMessage] = useState(false);
-
   // Submit the form
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -84,7 +81,7 @@ export default function Contact() {
                 required
               ></textarea>
               <button type="submit">
-                Send <BsSend />
+                Send <BsSend className="icon" />
               </button>
             </form>
           </>

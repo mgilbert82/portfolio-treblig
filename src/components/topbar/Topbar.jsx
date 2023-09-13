@@ -4,7 +4,7 @@ import "./topbar.scss";
 import Image from "next/image";
 import LogoColor from "../../../public/images/treblig-logo-brown.png";
 import { BiMailSend } from "react-icons/bi";
-import { BsPerson } from "react-icons/bs";
+import { BsTelephone } from "react-icons/bs";
 
 export default function Topbar({ open, setOpen }) {
   return (
@@ -21,7 +21,7 @@ export default function Topbar({ open, setOpen }) {
             Treblig.fr
           </a>
           <div className="itemContainer">
-            <BsPerson className="icon" />
+            <BsTelephone className="icon" />
             <a href="tel:+33756827809">+33 7 56 82 78 09</a>
           </div>
           <div className="itemContainer">

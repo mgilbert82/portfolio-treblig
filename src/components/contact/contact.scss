@@ -55,12 +55,14 @@
                 font-size: 14px;
                 background-color: $maincolor50;
                 border: none;
-                border-bottom: 1px solid $graycolor950;
                 padding: 10px;
 
                 &::placeholder {
                     padding: 10px;
                     color: $maincolor300;
+                    font-family: "lato", sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
                 }
 
                 &:focus {
@@ -77,13 +79,15 @@
                 width: 300px;
                 height: 200px;
                 border: none;
-                border-bottom: 1px solid $graycolor950;
                 font-size: 14px;
                 padding: 10px;
 
                 &::placeholder {
                     padding: 10px;
                     color: $maincolor300;
+                    font-family: "lato", sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
                 }
 
                 &:focus {
@@ -92,23 +96,50 @@
             }
 
             button {
-                width: 150px;
-                height: 40px;
-                color: white;
-                font-weight: 500;
                 font-size: 18px;
-                font-family: "lato", sans-serif;
-                background-color: $maincolor;
-                border: none;
-                border-radius: 5px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                padding: 13px 20px 13px;
+                outline: 0;
+                border: 1px solid $maincolor;
                 cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
+                position: relative;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                background: linear-gradient(230deg, $maincolor100, $maincolor50);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-decoration: none;
+                font-family: "lato", sans-serif;
+                border-radius: 20px;
 
-                &:focus {
-                    outline: none;
+                &:after {
+                    content: "";
+                    background: rgb(233, 128, 32);
+                    background: linear-gradient(215deg, rgba(233, 128, 32, 1) 0%, rgba(242, 183, 87, 1) 100%);
+                    width: 100%;
+                    z-index: -1;
+                    position: absolute;
+                    height: 100%;
+                    top: 7px;
+                    left: 7px;
+                    transition: 1s all ease;
+                    border-radius: 20px;
+                }
+
+                &:hover:after {
+                    top: 0px;
+                    left: 0px;
+
+                }
+
+                &:hover {
+                    transition: 2s all ease;
+                }
+
+                .icon {
+                    color: $maincolor50;
                 }
 
                 @include mobile {
