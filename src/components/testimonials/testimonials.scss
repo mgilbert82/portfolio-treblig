@@ -4,16 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    h1 {
-        font-size: 50px;
-        margin: 0;
-        padding-bottom: 15px;
-
-        @include mobile {
-            font-size: 40px;
-        }
-    }
+    justify-content: start;
 
     .container {
         width: 100%;
@@ -30,15 +21,41 @@
         .card {
             width: 250px;
             height: 70%;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: 0px 0px 15px -8px $maincolor;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             padding: 20px;
-            background-color: white;
+            color: $maincolor50;
             cursor: pointer;
             transition: all 1s ease;
+            border: 1px solid $maincolor;
+            position: relative;
+
+            &:after {
+                content: "";
+                background: rgb(233, 128, 32);
+                background: linear-gradient(215deg, rgb(229, 143, 63) 0%, rgb(238, 192, 118) 100%);
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 1s all ease;
+                border-radius: 20px;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+
+            }
+
+            &:hover {
+                transition: 2s all ease;
+            }
 
             @include mobile {
                 height: 180px;
@@ -64,26 +81,34 @@
 
             .top {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
 
-                img {
+                .title {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    justify-content: space-between;
 
-                    &.left,
-                    &.right {
-                        height: 25px;
-                    }
-
-                    &.user {
-                        height: 60px;
-                        width: 60px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                        margin: 0 30px;
+                    h3 {
+                        font-size: 18px;
+                        margin: 0;
+                        padding: 0;
+                        color: $maincolor100;
 
                         @include mobile {
-                            width: 40px;
-                            height: 40px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    h4 {
+                        color: $graycolor800;
+
+                        @include mobile {
+                            margin: 0;
+                            padding: 0;
+
                         }
                     }
 
@@ -91,9 +116,27 @@
             }
 
             .center {
-                padding: 10px;
-                background-color: $maincolor100;
-                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .user {
+                    height: 98%;
+                    width: 98%;
+                    border-radius: 5px;
+                    margin: 10px auto;
+                    object-fit: cover;
+
+                    @include mobile {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    .icons {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
 
                 @include mobile {
                     font-size: 12px;
@@ -106,33 +149,15 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                color: $graycolor50;
+                font-family: "lato", sans-serif;
 
                 @include mobile {
                     margin: 0;
                     padding: 0;
                 }
-
-                h3 {
-                    font-size: 18px;
-                    margin: 0;
-                    padding: 0;
-
-                    @include mobile {
-                        font-size: 14px;
-                    }
-                }
-
-                h4 {
-                    color: $graycolor400;
-
-                    @include mobile {
-                        margin: 0;
-                        padding: 0;
-
-                    }
-                }
             }
-        }
 
+        }
     }
 }
