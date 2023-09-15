@@ -2,7 +2,7 @@
 import React from "react";
 import "./topbar.scss";
 import Image from "next/image";
-import LogoColor from "../../../public/images/treblig-logo-brown.png";
+import LogoColor from "../../../public/assets/images/website/treblig-logo-brown.png";
 import { BiMailSend } from "react-icons/bi";
 import { BsTelephone } from "react-icons/bs";
 

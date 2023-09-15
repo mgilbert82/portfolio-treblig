@@ -1,7 +1,7 @@
 import React from "react";
 import "./testimonials.scss";
 import { AiOutlineHeart } from "react-icons/ai";
-import { BiMessageRounded } from "react-icons/bi";
+import { BiMessageRounded, BiPaperPlane } from "react-icons/bi";
 
 export default function Testimonials() {
   const data = [
@@ -10,7 +10,7 @@ export default function Testimonials() {
       name: "Harry Potter",
       title: "Great magician",
       img: "https://resize.elle.fr/square_1280_webp/var/plain_site/storage/images/loisirs/livres/news/harry-potter-de-nouveaux-secrets-devoiles-2913738/53231812-1-fre-FR/Harry-Potter-de-nouveaux-secrets-devoiles.jpg",
-      desc: "I have been using Michel for over a year now and I love it! I can't imagine life without it. It's so easy to use, and the customer service is great.",
+      desc: "I have been using Michel for over a year now and I love it! I can't imagine life without it.",
     },
     {
       id: 1,
@@ -25,7 +25,7 @@ export default function Testimonials() {
       name: "Walt Disney",
       title: "The Dream Maker",
       img: "https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_1946.JPG",
-      desc: "I love Michel! This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.",
+      desc: "I love Michel! This is an amazing service and it has saved me and my small business so much time.",
     },
   ];
   return (
@@ -45,11 +45,12 @@ export default function Testimonials() {
             <div className="center">
               <img src={d.img} alt={d.name} className="user" />
               <div className="icons">
-                <AiOutlineHeart size={20} className="icon" />
-                <BiMessageRounded size={20} className="icon" />
+                <AiOutlineHeart size={20} color="#411207" />
+                <BiMessageRounded size={20} color="#411207" />
+                <BiPaperPlane size={20} color="#411207" />
               </div>
             </div>
-            <div className="bottom">{d.desc}</div>
+            <div className="bottom">"{d.desc}"</div>
           </div>
         ))}
       </div>

@@ -3,12 +3,11 @@ import "./app.scss";
 import Topbar from "@/components/topbar/Topbar";
 import Menu from "@/components/menu/Menu";
 import Intro from "@/components/intro/Intro";
-import Portfolio from "@/components/portfolio/Portfolio";
 import Works from "@/components/works/Works";
 import Testimonials from "@/components/testimonials/Testimonials";
 import Contact from "@/components/contact/Contact";
 import { useState } from "react";
-import Footer from "@/components/footer/Footer";
+import About from "@/components/about/About";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -18,7 +17,7 @@ export default function Home() {
       <Menu open={open} setOpen={setOpen} />
       <div className="sections">
         <Intro />
-        <Portfolio />
+        <About />
         <Works />
         <Testimonials />
         <Contact />

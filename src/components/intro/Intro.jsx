@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./intro.scss";
-import IconME from "../../../public/images/iconme.png";
+import IconME from "../../../public/assets/images/website/iconme.png";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import { init } from "ityped";

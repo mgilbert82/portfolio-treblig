@@ -12,31 +12,31 @@ export default function Menu({ open, setOpen }) {
       <ul>
         <li onClick={() => setOpen(false)}>
           <a href="#intro">
-            <PiHouseFill color="#b9ecfe" />
+            <PiHouseFill size="30" color="#fef7ec" />
             Home
           </a>
         </li>
         <li onClick={() => setOpen(false)}>
           <a href="#about">
-            <TbUserQuestion color="#fce98b" />
+            <TbUserQuestion size="30" color="#fef7ec" />
             About
           </a>
         </li>
         <li onClick={() => setOpen(false)}>
           <a href="#works">
-            <BsFillRocketTakeoffFill color="#ffc8f0" />
+            <BsFillRocketTakeoffFill size="30" color="#fef7ec" />
             Works
           </a>
         </li>
         <li onClick={() => setOpen(false)}>
           <a href="#testimonials">
-            <BiMessageAltCheck color="#b0ffd1" />
+            <BiMessageAltCheck size="30" color="#fef7ec" />
             Testimonials
           </a>
         </li>
         <li onClick={() => setOpen(false)}>
           <a href="#contact">
-            <BiMailSend color="#d8d8d8" />
+            <BiMailSend size="30" color="#fef7ec" />
             Contact
           </a>
         </li>

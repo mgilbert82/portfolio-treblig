@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./contact.scss";
-import MailSent from "../../../public/images/mail-sent.png";
+import MailSent from "../../../public/assets/images/website/mail-sent.png";
 import Image from "next/image";
 import { BsSend } from "react-icons/bs";
 

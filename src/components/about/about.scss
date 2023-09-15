@@ -1,0 +1,281 @@
+@import "../../app/globals.scss";
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    h1 {
+        color: $maincolor;
+        text-align: center;
+        font-weight: 600;
+        font-size: 40px;
+
+        @include mobile {
+            padding: 0;
+            font-size: 35px;
+            margin: 0;
+        }
+    }
+
+    .aboutContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin: 0;
+
+        }
+
+        .left {
+            width: 40vw;
+            background-color: $maincolor50;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px -8px $maincolor;
+            cursor: pointer;
+            transition: 1s all ease;
+
+            @include mobile {
+                width: 90vw;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .iconContainer {
+                border: 1px solid $maincolor300;
+                border-radius: 50%;
+                padding: 15px;
+                background-color: $maincolor;
+                text-align: center;
+                height: 20px;
+                width: 20px;
+                float: right;
+
+                .icon {
+                    color: $maincolor300;
+                }
+            }
+
+            h2 {
+                font-size: 25px;
+                font-weight: 600;
+                margin: 0;
+
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+                span {
+                    font-family: "lato", sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        .right {
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include mobile {
+                width: 100vw;
+            }
+
+            .rightTop {
+                background-color: $maincolor50;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 15px -8px $maincolor;
+                cursor: pointer;
+                transition: 1s all ease;
+
+                @include mobile {
+                    padding: 10px;
+                    margin: 10px;
+                }
+
+                .iconContainer {
+                    border: 1px solid $maincolor300;
+                    border-radius: 50%;
+                    padding: 10px;
+                    background-color: $maincolor;
+                    text-align: center;
+                    height: 20px;
+                    width: 20px;
+                    float: right;
+
+                    .icon {
+                        height: 20px;
+                        width: 20px;
+                        color: $maincolor300;
+                    }
+                }
+
+                h2 {
+                    font-size: 25px;
+                    font-weight: 600;
+
+                    @include mobile {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+
+                    span {
+                        font-family: "lato", sans-serif;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+
+            .rightBottom {
+                background-color: $maincolor50;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 15px -8px $maincolor;
+                cursor: pointer;
+                transition: 1s all ease;
+
+                @include mobile {
+                    padding: 10px;
+                    margin: 10px;
+                }
+
+                .iconContainer {
+                    border: 1px solid $maincolor300;
+                    border-radius: 50%;
+                    padding: 10px;
+                    background-color: $maincolor;
+                    text-align: center;
+                    height: 20px;
+                    width: 20px;
+                    float: right;
+
+                    .icon {
+                        height: 20px;
+                        width: 20px;
+                        color: $maincolor300;
+                    }
+                }
+
+                h2 {
+                    font-size: 25px;
+                    font-weight: 600;
+
+                    @include mobile {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                .list {
+                    font-family: "lato", sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    gap: 10px;
+
+                    span {
+                        .icon {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 10px;
+                            color: $orangecolor;
+                        }
+                    }
+                }
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    .ctaButton {
+        display: flex;
+
+        .button {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid $maincolor;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            background: linear-gradient(230deg, $maincolor100, $maincolor50);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            font-family: "lato", sans-serif;
+            border-radius: 20px;
+
+            &:after {
+                content: "";
+                background: rgb(233, 128, 32);
+                background: linear-gradient(215deg, rgba(233, 128, 32, 1) 0%, rgba(242, 183, 87, 1) 100%);
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 1s all ease;
+                border-radius: 20px;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+            }
+
+            &:hover {
+                transition: 2s all ease;
+            }
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+}

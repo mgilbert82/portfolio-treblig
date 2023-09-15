@@ -15,21 +15,41 @@
     align-items: center;
     transition: all 1s ease;
 
+    @include mobile {
+        width: 100vw;
+        right: -100vw;
+    }
+
     &.active {
         right: 0;
     }
 
     ul {
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
         list-style: none;
         font-size: 30px;
         font-weight: 300;
-        color: white;
+        color: $graycolor50;
         width: 80%;
+        position: relative;
+
 
         li {
-            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid $maincolor500;
+            cursor: pointer;
+            position: relative;
+            background-color: inherit;
+            text-decoration: none;
+            font-family: "lato", sans-serif;
+            border-radius: 20px;
+            width: 180px;
 
             a {
                 display: flex;
@@ -40,11 +60,29 @@
                 text-decoration: none;
             }
 
+            &:after {
+                content: "";
+                // background: rgb(233, 128, 32);
+                // background: linear-gradient(215deg, rgba(233, 128, 32, 1) 0%, rgba(242, 183, 87, 1) 100%);
+                width: 100%;
+                background-color: $maincolor900;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 1s all ease;
+                border-radius: 20px;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+            }
+
             &:hover {
                 font-weight: 500;
             }
         }
     }
-
-    span {}
 }

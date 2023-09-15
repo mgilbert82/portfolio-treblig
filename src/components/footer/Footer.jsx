@@ -2,9 +2,9 @@ import React from "react";
 import "./footer.scss";
 import Image from "next/image";
 import Link from "next/link";
-import LinkDin from "../../../public/images/socialMedia/linkedinLogo.svg";
-import Github from "../../../public/images/socialMedia/githubLogo.svg";
-import Insta from "../../../public/images/socialMedia/instagramLogo.svg";
+import LinkDin from "../../../public/assets/logo/socialMedia/linkedinLogo.svg";
+import Github from "../../../public/assets/logo/socialMedia/githubLogo.svg";
+import Insta from "../../../public/assets/logo/socialMedia/instagramLogo.svg";
 
 export default function Footer() {
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="credits">
-        <span>Powered by Michel Gilbert</span>
+        <span>Made with ❤️ by Michel Gilbert</span>
         <hr />
         <span>All right reserved 2023</span>
       </div>
