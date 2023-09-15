@@ -3,7 +3,7 @@
 .menu {
     width: 300px;
     height: 100vh;
-    background-color: $maincolor;
+    background-color: white;
     text-decoration: none;
     position: fixed;
     top: 70px;
@@ -31,7 +31,6 @@
         list-style: none;
         font-size: 30px;
         font-weight: 300;
-        color: $graycolor50;
         width: 80%;
         position: relative;
 
@@ -42,7 +41,7 @@
             letter-spacing: 1px;
             padding: 13px 20px 13px;
             outline: 0;
-            border: 1px solid $maincolor500;
+            border: 1px solid $maincolor;
             cursor: pointer;
             position: relative;
             background-color: inherit;
@@ -50,6 +49,10 @@
             font-family: "lato", sans-serif;
             border-radius: 20px;
             width: 180px;
+            touch-action: manipulation;
+            background: linear-gradient(230deg, $maincolor100, $maincolor50);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
 
             a {
                 display: flex;
@@ -62,10 +65,10 @@
 
             &:after {
                 content: "";
-                // background: rgb(233, 128, 32);
-                // background: linear-gradient(215deg, rgba(233, 128, 32, 1) 0%, rgba(242, 183, 87, 1) 100%);
+                background: rgb(233, 128, 32);
+                background: linear-gradient(215deg, rgba(233, 128, 32, 1) 0%, rgba(242, 183, 87, 1) 100%);
                 width: 100%;
-                background-color: $maincolor900;
+                //background-color: $maincolor900;
                 z-index: -1;
                 position: absolute;
                 height: 100%;
@@ -82,6 +85,10 @@
 
             &:hover {
                 font-weight: 500;
+                touch-action: manipulation;
+                background: linear-gradient(230deg, $maincolor900, $maincolor700);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
