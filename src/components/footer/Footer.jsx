@@ -39,9 +39,9 @@ export default function Footer() {
         </Link>
       </div>
       <div className="credits">
-        <span>Made with ❤️ by Michel Gilbert</span>
+        <span>Créé avec ❤️ par Michel Gilbert</span>
         <hr />
-        <span>All right reserved 2023</span>
+        <span>Tous droits réservés 2023</span>
       </div>
     </div>
   );

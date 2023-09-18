@@ -2,12 +2,12 @@ import "./globals.scss";
 
 export const metadata = {
   title: "Michel Gilbert - Portfolio",
-  description: "Developer front-end",
+  description: "Developpeur web et mobile",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <link
           rel="apple-touch-icon"

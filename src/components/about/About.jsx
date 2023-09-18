@@ -9,28 +9,35 @@ import { BsBalloonHeart, BsEnvelopePaperHeart } from "react-icons/bs";
 export default function About() {
   return (
     <div className="about" id="about">
-      <h1>Who am I ?</h1>
+      <h1>A propos</h1>
       <div className="aboutContainer">
         <div className="left">
           <div className="iconContainer">
             <FaFeatherAlt className="icon" />
           </div>
-          <h2>Story</h2>
+          <h2>Il était une fois...</h2>
 
           <div className="text">
             <span>
-              Adventurers for several years exploring the world of
-              department stores, and conquering human management
-              through support, communication and knowledge sharing.
+              Un jeune homme motivé, passioné et plein d'énergie qui a
+              expérimenté tous les métiers d'un grand magasin. A
+              travers mes différents postes, j'ai créer des tableaux
+              de bords, des applications de suivis de performances,
+              d'activités... Puis des outils d'analyses et de
+              synthétisation de données.
               <br />
               <br />
-              During this period, I developed several IT solutions to
-              optimize and improve the quality of life at work. While
-              I participated in the group"s various IS projects, I was
-              often a referent, trainer, key-user... <br />
+              J'ai participé à plusieurs grands projets informatiques
+              avec des interlocuteurs variés (DSI, projets métiers,
+              logistiques, comptabilités). Ce qui m'a permis
+              d'appréhender le suivi d'un projet et de ces différentes
+              phases (analyse du besoin, rédaction du cahier des
+              charges, évaluation du coût...) <br />
               <br />
-              After 15 years in this structure, I decided to make a
-              professional retraining in web application development.
+              En 2021, je décide de quitter mon emploi de cadre
+              administratif et financier pour me reconvertir. Je me
+              remets sur les bancs de l'école et je deviens
+              Developpeur web afin de vivre de ma passion.
             </span>
           </div>
         </div>
@@ -39,13 +46,13 @@ export default function About() {
             <div className="iconContainer">
               <AiOutlineFieldTime className="icon" />
             </div>
-            <h2>Now</h2>
+            <h2>Et aujourd'hui..</h2>
 
             <div className="text">
               <span>
-                Actually, i work on myself to help handcraft man,
-                charitable association to improve her communication on
-                the web !
+                J'aide au développement des PME, particuliers et
+                associations à travailler sur leur communication et
+                leur donner de la visibilité sur internet.
               </span>
             </div>
           </div>
@@ -53,21 +60,22 @@ export default function About() {
             <div className="iconContainer">
               <IoHelpBuoySharp className="icon" />
             </div>
-            <h2>What can i do for you ?</h2>
+            <h2>Comment puis-je vous aider ?</h2>
             <div className="list">
               <span>
                 <LiaRocketSolid className="icon" />
-                Develop and deploy an e-commerce solution, showcase, a
-                mobile application
+                Développement d'un site vitrine, site marchands, d'un
+                compte business sur google, ...
               </span>
               <span>
                 <BsBalloonHeart className="icon" />
-                Create your own brand design
+                Conception d'une identité graphique (logo, charte
+                graphiques, ...)
               </span>
               <span>
                 <BsEnvelopePaperHeart className="icon" />
-                Improve your communication with flyers, creative
-                content, ...
+                Création de supports de communications (flyer,
+                affiche, publicitaire,...)
               </span>
             </div>
           </div>
@@ -75,7 +83,7 @@ export default function About() {
       </div>
       <div className="ctaButton">
         <a href="#contact" className="button">
-          Contact me
+          Demander un devis
         </a>
       </div>
     </div>

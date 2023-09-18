@@ -11,7 +11,11 @@ export default function Intro() {
     init(textRef.current, {
       showCursor: false,
       backDelay: 1500,
-      strings: ["Developer", "Designer", "Content creator"],
+      strings: [
+        "Developpement web",
+        "Concepteur graphique",
+        "Créateur de contenu",
+      ],
     });
   }, []);
   return (
@@ -30,7 +34,7 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="introWrapper">
-          <h2>Hi there, I'am </h2>
+          <h2> </h2>
           <h1>Michel Gilbert</h1>
           <h3>
             Freelance <span ref={textRef}></span>

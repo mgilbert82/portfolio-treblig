@@ -28,9 +28,7 @@ export default function Contact() {
         }
       );
       if (res.ok) {
-        setSuccessMessage(
-          "Votre message a été envoyé avec succès 🚀"
-        );
+        setSuccessMessage("Votre message a bien été expédié 🚀");
       } else {
         setErrorMessage("Un incident est survenu 🤔!");
       }
@@ -59,7 +57,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="username"
-                placeholder="John Doe"
+                placeholder="Nom et Prénom"
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 value={username}
@@ -67,7 +65,7 @@ export default function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="johndoe@mail.com"
+                placeholder="monemail@boitemail.com"
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 value={email}
@@ -75,13 +73,13 @@ export default function Contact() {
               <textarea
                 name="message"
                 id="message"
-                placeholder="Hello my friend..."
+                placeholder="Bonjour Michel..."
                 onChange={(e) => setMessage(e.target.value)}
                 value={message}
                 required
               ></textarea>
               <button type="submit">
-                Send <BsSend className="icon" />
+                Envoyer <BsSend className="icon" />
               </button>
             </form>
           </>

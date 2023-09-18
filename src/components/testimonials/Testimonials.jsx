@@ -8,29 +8,29 @@ export default function Testimonials() {
     {
       id: 0,
       name: "Harry Potter",
-      title: "Great magician",
+      title: "Wizzard malgré lui",
       img: "https://resize.elle.fr/square_1280_webp/var/plain_site/storage/images/loisirs/livres/news/harry-potter-de-nouveaux-secrets-devoiles-2913738/53231812-1-fre-FR/Harry-Potter-de-nouveaux-secrets-devoiles.jpg",
-      desc: "I have been using Michel for over a year now and I love it! I can't imagine life without it.",
+      desc: "Cela fait un an que Michel m'aide à travailler ma communication chez les moldus et je l'adore ! Je ne peux pas imaginer la vie sans lui",
     },
     {
       id: 1,
       name: "Indiana Jones",
-      title: "A Fearless Adventurer",
+      title: "Professeur d'Histoire",
       img: "https://www.lexpress.fr/resizer/cmz9nNQvk45Sh1VQvgQW7t-wBdk=/970x548/cloudfront-eu-central-1.images.arcpublishing.com/lexpress/KIS5LTG5GRBRZAW4OOZ5GOYB2Q.jpg",
-      desc: "If you want to take your business to the next level, use Michel and don't look any further.",
+      desc: " J'en ai trouvé des trésors mais alors des commes Michel, jamais!!",
       featured: true,
     },
     {
       id: 2,
       name: "Walt Disney",
-      title: "The Dream Maker",
+      title: "Vendeur de rêve",
       img: "https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_1946.JPG",
-      desc: "I love Michel! This is an amazing service and it has saved me and my small business so much time.",
+      desc: "J'adore ce mec! Il m’a fait gagner, à moi et à ma petite entreprise, beaucoup de temps!",
     },
   ];
   return (
     <div className="testimonial" id="testimonials">
-      <h1>Testimonials</h1>
+      <h1>Témoignages</h1>
       <div className="container">
         {data.map((d) => (
           <div
