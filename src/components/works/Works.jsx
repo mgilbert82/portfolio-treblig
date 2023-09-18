@@ -8,7 +8,7 @@ export default function Works() {
   const fetcher = (...args) =>
     fetch(...args).then((res) => res.json());
   const [currentSlide, setCurrentSlide] = useState(0);
-  const URL = "http://localhost:3000/api/works";
+  const URL = `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/works`;
   const { data, error } = useSWR(URL, fetcher);
 
   if (error) return <div>Failed to load !</div>;
