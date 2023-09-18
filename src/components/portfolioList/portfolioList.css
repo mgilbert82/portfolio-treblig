@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.portfolioList {
+  font-size: 14px;
+  margin-right: 5px;
+  padding: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .portfolioList {
+    margin-right: 20px;
+  }
+}
+.portfolioList.active {
+  background-color: #411207;
+  color: white;
+  border-radius: 10px;
+}/*# sourceMappingURL=portfolioList.css.map */

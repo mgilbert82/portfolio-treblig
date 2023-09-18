@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "lato", "sans-serif";
+}
+.portfolio h1 {
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .portfolio h1 {
+    font-size: 30px;
+  }
+}
+.portfolio ul {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .portfolio ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}
+.portfolio .portfolioContainer {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .portfolio .portfolioContainer {
+    width: 100%;
+  }
+}
+.portfolio .portfolioContainer .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 10px 20px;
+  width: 220px;
+  height: 150px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .portfolio .portfolioContainer .item {
+    width: 130px;
+    height: 100px;
+  }
+}
+.portfolio .portfolioContainer .item img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  z-index: 1;
+}
+.portfolio .portfolioContainer .item h3 {
+  position: absolute;
+  font-size: 20px;
+}
+.portfolio .portfolioContainer .item:hover {
+  background-color: #722915;
+  color: white;
+}
+.portfolio .portfolioContainer .item:hover .img {
+  opacity: 0.2;
+  z-index: 0;
+}/*# sourceMappingURL=portfolio.css.map */

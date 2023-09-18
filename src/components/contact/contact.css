@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.contact {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+}
+.contact .left {
+  flex: 1;
+  overflow: hidden;
+}
+.contact .left img {
+  height: 100%;
+  width: 100%;
+  transition: 1s all ease;
+}
+@media (max-width: 768px) {
+  .contact .left img {
+    object-fit: contain;
+  }
+}
+.contact .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact .right h2 {
+  font-size: 40px;
+  color: #411207;
+}
+@media (max-width: 768px) {
+  .contact .right h2 {
+    font-size: 30px;
+  }
+}
+.contact .right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 70%;
+  gap: 15px;
+}
+.contact .right form input {
+  width: 300px;
+  height: 30px;
+  font-size: 14px;
+  background-color: #fef7ec;
+  border: none;
+  padding: 10px;
+}
+.contact .right form input::placeholder {
+  padding: 5px;
+  color: #f2b757;
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.contact .right form input:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .contact .right form input {
+    height: 20px;
+  }
+}
+.contact .right form textarea {
+  background-color: #fef7ec;
+  width: 300px;
+  height: 300px;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.contact .right form textarea::placeholder {
+  padding: 5px;
+  color: #f2b757;
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.contact .right form textarea:focus {
+  outline: none;
+}
+.contact .right form button {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid #411207;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background: linear-gradient(230deg, #fbeaca, #fef7ec);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-family: "lato", sans-serif;
+  border-radius: 20px;
+}
+.contact .right form button:after {
+  content: "";
+  background: rgb(233, 128, 32);
+  background: linear-gradient(215deg, rgb(233, 128, 32) 0%, rgb(242, 183, 87) 100%);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 1s all ease;
+  border-radius: 20px;
+}
+.contact .right form button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+.contact .right form button:hover {
+  transition: 2s all ease;
+}
+.contact .right form button .icon {
+  color: #fef7ec;
+}
+@media (max-width: 768px) {
+  .contact .right form button {
+    height: 40px;
+  }
+}
+.contact .right span {
+  color: #ab3d12;
+  font-weight: 500;
+  font-family: "lato", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .contact .right {
+    margin: 5px;
+    padding: 5px;
+  }
+}/*# sourceMappingURL=contact.css.map */

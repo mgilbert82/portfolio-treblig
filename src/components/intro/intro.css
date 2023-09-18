@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.intro {
+  background-color: white;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.intro .left {
+  flex: 0.5;
+  overflow: hidden;
+}
+.intro .left .imgContainer {
+  width: 700px;
+  height: 700px;
+  background: rgb(242, 183, 87);
+  background: linear-gradient(215deg, rgb(242, 183, 87) 0%, rgb(233, 128, 32) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  transition: 2s all ease;
+}
+@media (max-width: 768px) {
+  .intro .left .imgContainer {
+    align-items: flex-start;
+  }
+}
+.intro .left .imgContainer img {
+  position: absolute;
+  left: -5px;
+  bottom: -60px;
+  height: 100%;
+  width: 100%;
+  transition: 2s all ease;
+}
+@media (max-width: 768px) {
+  .intro .left .imgContainer img {
+    left: 15%;
+    top: 0;
+    height: 60%;
+    width: 60%;
+  }
+}
+.intro .left .imgContainer img:hover {
+  scale: 1.1;
+}
+.intro .right {
+  flex: 0.7;
+  position: relative;
+}
+.intro .right .introWrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .intro .right .introWrapper {
+    padding-left: 0;
+    align-items: center;
+  }
+}
+.intro .right .introWrapper h1 {
+  font-size: 60px;
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .intro .right .introWrapper h1 {
+    font-size: 40px;
+  }
+}
+.intro .right .introWrapper h2 {
+  font-size: 35px;
+}
+.intro .right .introWrapper h3 {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  .intro .right .introWrapper h3 {
+    font-size: 20px;
+  }
+}
+.intro .right .introWrapper h3 span {
+  font-size: inherit;
+  color: #b2590b;
+}
+.intro .right .introWrapper h3 .ityped-cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.intro .right .introWrapper a {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  color: #411207;
+}
+.intro .right .introWrapper a .icon {
+  animation: arrowBlink 2s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=intro.css.map */
