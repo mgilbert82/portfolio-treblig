@@ -61,6 +61,7 @@ export default function Contact() {
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 value={username}
+                autoComplete="true"
               />
               <input
                 type="email"
@@ -69,6 +70,7 @@ export default function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 value={email}
+                autoComplete="true"
               />
               <textarea
                 name="message"

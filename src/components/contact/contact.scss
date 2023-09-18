@@ -9,17 +9,12 @@
 
     .left {
         flex: 1;
-        overflow: hidden;
 
         img {
             height: 100%;
             width: 100%;
             transition: 1s all ease;
-
-
-            @include mobile {
-                object-fit: contain;
-            }
+            object-fit: contain;
         }
     }
 

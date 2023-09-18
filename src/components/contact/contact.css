@@ -16,17 +16,12 @@ body {
 }
 .contact .left {
   flex: 1;
-  overflow: hidden;
 }
 .contact .left img {
   height: 100%;
   width: 100%;
   transition: 1s all ease;
-}
-@media (max-width: 768px) {
-  .contact .left img {
-    object-fit: contain;
-  }
+  object-fit: contain;
 }
 .contact .right {
   flex: 1;

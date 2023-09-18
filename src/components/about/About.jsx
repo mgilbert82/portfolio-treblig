@@ -3,8 +3,11 @@ import React from "react";
 import { FaFeatherAlt } from "react-icons/fa";
 import { AiOutlineFieldTime } from "react-icons/ai";
 import { IoHelpBuoySharp } from "react-icons/io5";
+import { IoIosCafe } from "react-icons/io";
 import { LiaRocketSolid } from "react-icons/lia";
 import { BsBalloonHeart, BsEnvelopePaperHeart } from "react-icons/bs";
+import Aboutimg from "../../../public/assets/images/website/about-img.png";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -12,42 +15,45 @@ export default function About() {
       <h1>A propos</h1>
       <div className="aboutContainer">
         <div className="left">
-          <div className="iconContainer">
-            <FaFeatherAlt className="icon" />
+          <div className="title">
+            <div className="iconContainer">
+              <FaFeatherAlt className="icon" />
+            </div>
+            <h2>L'Expérience</h2>
           </div>
-          <h2>Il était une fois...</h2>
-
           <div className="text">
             <span>
-              Un jeune homme motivé, passioné et plein d'énergie qui a
-              expérimenté tous les métiers d'un grand magasin. A
-              travers mes différents postes, j'ai créer des tableaux
-              de bords, des applications de suivis de performances,
-              d'activités... Puis des outils d'analyses et de
-              synthétisation de données.
+              Jeune homme motivé, passioné et plein d'énergie ayant
+              expérimenté plusieurs métiers d'un grand magasin. J'ai
+              conçu des tableaux de bords, des applications de suivis
+              de performances, d'activités... Puis des outils
+              d'analyses et de synthétisation de données.
               <br />
               <br />
-              J'ai participé à plusieurs grands projets informatiques
-              avec des interlocuteurs variés (DSI, projets métiers,
+              J'ai participé à de grands projets informatiques avec
+              des interlocuteurs variés (DSI, projets métiers,
               logistiques, comptabilités). Ce qui m'a permis
               d'appréhender le suivi d'un projet et de ces différentes
               phases (analyse du besoin, rédaction du cahier des
               charges, évaluation du coût...) <br />
               <br />
               En 2021, je décide de quitter mon emploi de cadre
-              administratif et financier pour me reconvertir. Je me
-              remets sur les bancs de l'école et je deviens
-              Developpeur web afin de vivre de ma passion.
+              administratif et financier pour me reconvertir et
+              devenir développeur web.
             </span>
           </div>
         </div>
+        <div className="center">
+          <Image src={Aboutimg} alt="" width={750} height={500} />
+        </div>
         <div className="right">
-          <div className="rightTop">
-            <div className="iconContainer">
-              <AiOutlineFieldTime className="icon" />
+          <div className="now">
+            <div className="title">
+              <div className="iconContainer">
+                <AiOutlineFieldTime className="icon" />
+              </div>
+              <h2>Actuellement..</h2>
             </div>
-            <h2>Et aujourd'hui..</h2>
-
             <div className="text">
               <span>
                 J'aide au développement des PME, particuliers et
@@ -56,12 +62,15 @@ export default function About() {
               </span>
             </div>
           </div>
-          <div className="rightBottom">
-            <div className="iconContainer">
-              <IoHelpBuoySharp className="icon" />
+          <div className="help">
+            <div className="title">
+              {" "}
+              <div className="iconContainer">
+                <IoHelpBuoySharp className="icon" />
+              </div>
+              <h2>Comment puis-je vous aider ?</h2>
             </div>
-            <h2>Comment puis-je vous aider ?</h2>
-            <div className="list">
+            <div className="text">
               <span>
                 <LiaRocketSolid className="icon" />
                 Développement d'un site vitrine, site marchands, d'un
@@ -83,7 +92,7 @@ export default function About() {
       </div>
       <div className="ctaButton">
         <a href="#contact" className="button">
-          Demander un devis
+          <IoIosCafe size={20} color="#fbeaca" /> Me contacter
         </a>
       </div>
     </div>
