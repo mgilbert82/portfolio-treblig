@@ -14,6 +14,7 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [token, setToken] = useState("");
+
   const recaptcha = useRef("");
 
   //recaptacha Submission
@@ -36,9 +37,10 @@ export default function Contact() {
           body: JSON.stringify({ username, email, message, token }),
         }
       );
-      console.log(res);
+      //console.log(res);
       if (res.ok) {
         setSuccessMessage("Votre message a bien été expédié 🚀");
+        setToken(null);
       } else {
         setErrorMessage("Un incident est survenu 🤔!");
       }
