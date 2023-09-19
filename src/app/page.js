@@ -4,7 +4,6 @@ import Topbar from "@/components/topbar/Topbar";
 import Menu from "@/components/menu/Menu";
 import Intro from "@/components/intro/Intro";
 import Works from "@/components/works/Works";
-import Testimonials from "@/components/testimonials/Testimonials";
 import Contact from "@/components/contact/Contact";
 import { useState } from "react";
 import About from "@/components/about/About";
@@ -19,7 +18,6 @@ export default function Home() {
         <Intro />
         <About />
         <Works />
-        <Testimonials />
         <Contact />
       </div>
     </main>

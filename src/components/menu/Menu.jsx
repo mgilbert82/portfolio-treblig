@@ -27,12 +27,12 @@ export default function Menu({ open, setOpen }) {
             Portfolio
           </a>
         </li>
-        <li onClick={() => setOpen(false)}>
+        {/* <li onClick={() => setOpen(false)}>
           <a href="#testimonials">
             <BiMessageAltCheck size="30" color="#fef7ec" />
             Témoignages
           </a>
-        </li>
+        </li> */}
         <li onClick={() => setOpen(false)}>
           <a href="#contact">
             <BiMailSend size="30" color="#fef7ec" />
