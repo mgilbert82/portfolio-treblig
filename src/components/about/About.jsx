@@ -23,11 +23,14 @@ export default function About() {
           </div>
           <div className="text">
             <span>
-              Jeune homme motivé, passionné et plein d'énergie ayant
-              expérimenté plusieurs métiers d'un grand magasin. J'ai
-              conçu des tableaux de bords, des applications de suivis
-              de performances, d'activités... Puis des outils
-              d'analyses et de synthétisation de données.
+              Après 20 ans à explorer divers métiers dans des domaines
+              variés (administration, financière, logistique,...),
+              j'ai assimilé des compétences de management, d'analyses,
+              d'organisations... <br />
+              En parallèle, j'ai toujours développé des tableaux de
+              bords, des applications de suivis de performances,
+              d'activités... Puis des outils d'analyses et de
+              synthétisation de données.
               <br />
               <br />
               J'ai participé à de grands projets informatiques avec
@@ -37,9 +40,8 @@ export default function About() {
               phases (analyse du besoin, rédaction du cahier des
               charges, évaluation du coût...) <br />
               <br />
-              En 2021, je décide de quitter mon emploi de cadre
-              administratif et financier pour me reconvertir et
-              devenir développeur web.
+              En 2021, je décide de réaliser une reconversion vers le
+              métier de développeur web.
             </span>
           </div>
         </div>
@@ -56,9 +58,9 @@ export default function About() {
             </div>
             <div className="text">
               <span>
-                J'aide au développement des PME, particuliers et
-                associations à travailler sur leur communication et
-                leur donner de la visibilité sur internet.
+                J'assiste des PME, particuliers et associations au
+                développement de leur communication et leur donner de
+                la visibilité sur internet.
               </span>
             </div>
           </div>
@@ -73,7 +75,7 @@ export default function About() {
             <div className="text">
               <span>
                 <LiaRocketSolid className="icon" />
-                Développement d'un site vitrine, site marchands, d'un
+                Développement d'un site vitrine, site marchand, d'un
                 compte business sur google, ...
               </span>
               <span>
