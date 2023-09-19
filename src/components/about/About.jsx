@@ -46,7 +46,13 @@ export default function About() {
           </div>
         </div>
         <div className="center">
-          <Image src={Aboutimg} alt="" width={750} height={500} />
+          <Image
+            src={Aboutimg}
+            alt=""
+            width={750}
+            height={500}
+            priority="lazy"
+          />
         </div>
         <div className="right">
           <div className="now">
