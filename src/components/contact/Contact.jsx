@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.scss";
 import MailSent from "../../../public/assets/images/website/mail-sent.png";
 import Image from "next/image";
@@ -8,43 +7,44 @@ import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
-  //Captcha variable
-  const [captcha, setCaptcha] = useState("");
   // Form Variables
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [token, setToken] = useState("");
+  const recaptcha = useRef("");
 
+  //recaptacha Submission
+  const handleCaptcha = async (token) => {
+    if (token) {
+      setToken(token);
+    }
+  };
   // Submit the form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (captcha) {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/send-email`,
-          {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify({ username, email, message }),
-          }
-        );
-        if (res.ok) {
-          setSuccessMessage("Votre message a bien été expédié 🚀");
-        } else {
-          setErrorMessage("Un incident est survenu 🤔!");
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/send-email`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ username, email, message, token }),
         }
-      } catch (error) {
-        setErrorMessage("Un incident est survenu 🤔!");
-        console.error("Error sending email:", error);
-      }
-    } else {
-      setErrorMessage(
-        "Veuillez cocher la case, je ne suis pas un robot.."
       );
+      console.log(res);
+      if (res.ok) {
+        setSuccessMessage("Votre message a bien été expédié 🚀");
+      } else {
+        setErrorMessage("Un incident est survenu 🤔!");
+      }
+    } catch (error) {
+      setErrorMessage("Un incident est survenu 🤔!");
+      console.error("Error sending email:", error);
     }
   };
   return (
@@ -55,6 +55,7 @@ export default function Contact() {
           alt="This is an image to describe a sending mail"
           width={1024}
           height={763.1}
+          priority="lazy"
         />
       </div>
       <div className="right">
@@ -94,7 +95,8 @@ export default function Contact() {
               ></textarea>
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                onChange={setCaptcha}
+                ref={recaptcha}
+                onChange={handleCaptcha}
               />
               <button type="submit">
                 Envoyer <BsSend className="icon" />

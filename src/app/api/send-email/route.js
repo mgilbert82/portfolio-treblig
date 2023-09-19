@@ -1,6 +1,7 @@
 import sgMail from "@sendgrid/mail";
 import "dotenv/config";
 import { NextResponse } from "next/server";
+import axios from "axios";
 
 const {
   NEXT_PUBLIC_SENDGRID_API_KEY,
@@ -21,14 +22,36 @@ export async function POST(req) {
           <p>The message: ${data.message}</p>
           <p>My email is: ${data.email}</p>`,
   };
+
+  const verifyRecaptcha = async (token) => {
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
+    return await axios.post(url);
+  };
+
   try {
-    await sgMail.send(msg);
-    //console.log(msg);
-    return NextResponse.json({
-      message: "This worked",
-      success: true,
-    });
+    const res = await verifyRecaptcha(data.token);
+    //console.log("verify", res);
+    if (res.data.success) {
+      await sgMail.send(msg);
+      //console.log(msg);
+      return NextResponse.json(
+        { status: 200 },
+        {
+          message: "This worked",
+          success: true,
+        }
+      );
+    } else {
+      return NextResponse.json({
+        message: "reCAPTCHA verification failed",
+        sucess: false,
+      });
+    }
   } catch (error) {
-    return NextResponse.json({ message: error, success: false });
+    return NextResponse.json(
+      { status: 400 },
+      { message: error, success: false }
+    );
   }
 }
