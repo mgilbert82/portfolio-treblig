@@ -23,7 +23,7 @@ export default function About() {
           </div>
           <div className="text">
             <span>
-              Jeune homme motivé, passioné et plein d'énergie ayant
+              Jeune homme motivé, passionné et plein d'énergie ayant
               expérimenté plusieurs métiers d'un grand magasin. J'ai
               conçu des tableaux de bords, des applications de suivis
               de performances, d'activités... Puis des outils

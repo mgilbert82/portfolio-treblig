@@ -2,19 +2,24 @@
 
 .contact {
     display: flex;
-
-    @include mobile {
-        flex-direction: column;
-    }
+    position: relative;
 
     .left {
         flex: 1;
 
+        @include mobile {
+            flex: 0
+        }
+
         img {
-            height: 100%;
             width: 100%;
             transition: 1s all ease;
             object-fit: contain;
+
+            @include mobile {
+                display: none;
+            }
+
         }
     }
 
@@ -47,10 +52,13 @@
             input {
                 width: 300px;
                 height: 30px;
-                font-size: 14px;
-                background-color: $maincolor50;
+                font-size: 16px;
+                background-color: $maincolor900;
                 border: none;
                 padding: 10px;
+                color: $maincolor50;
+                font-family: "lato", sans-serif;
+
 
                 &::placeholder {
                     padding: 5px;
@@ -70,11 +78,13 @@
             }
 
             textarea {
-                background-color: $maincolor50;
+                background-color: $maincolor900;
+                color: $maincolor50;
+                font-family: "lato", sans-serif;
                 width: 300px;
                 height: 300px;
                 border: none;
-                font-size: 14px;
+                font-size: 16px;
                 padding: 10px;
 
                 &::placeholder {
@@ -88,6 +98,10 @@
                 &:focus {
                     outline: none;
                 }
+            }
+
+            .recaptcha {
+                width: 300px;
             }
 
             button {
@@ -154,6 +168,29 @@
         @include mobile {
             margin: 5px;
             padding: 5px;
+        }
+    }
+
+    .arrowTop {
+        position: absolute;
+        bottom: 0;
+        right: 40px;
+        cursor: pointer;
+        transition: 1s all ease;
+
+        :hover {
+            scale: 1.1;
+        }
+
+        .icon {
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+
+            }
         }
     }
 }

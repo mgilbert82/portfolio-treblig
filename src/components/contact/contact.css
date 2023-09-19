@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap");
 html,
 body {
   margin: 0;
@@ -8,20 +7,25 @@ body {
 
 .contact {
   display: flex;
-}
-@media (max-width: 768px) {
-  .contact {
-    flex-direction: column;
-  }
+  position: relative;
 }
 .contact .left {
   flex: 1;
 }
+@media (max-width: 768px) {
+  .contact .left {
+    flex: 0;
+  }
+}
 .contact .left img {
-  height: 100%;
   width: 100%;
   transition: 1s all ease;
   object-fit: contain;
+}
+@media (max-width: 768px) {
+  .contact .left img {
+    display: none;
+  }
 }
 .contact .right {
   flex: 1;
@@ -51,10 +55,12 @@ body {
 .contact .right form input {
   width: 300px;
   height: 30px;
-  font-size: 14px;
-  background-color: #fef7ec;
+  font-size: 16px;
+  background-color: #722915;
   border: none;
   padding: 10px;
+  color: #fef7ec;
+  font-family: "lato", sans-serif;
 }
 .contact .right form input::placeholder {
   padding: 5px;
@@ -72,11 +78,13 @@ body {
   }
 }
 .contact .right form textarea {
-  background-color: #fef7ec;
+  background-color: #722915;
+  color: #fef7ec;
+  font-family: "lato", sans-serif;
   width: 300px;
   height: 300px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px;
 }
 .contact .right form textarea::placeholder {
@@ -88,6 +96,9 @@ body {
 }
 .contact .right form textarea:focus {
   outline: none;
+}
+.contact .right form .recaptcha {
+  width: 300px;
 }
 .contact .right form button {
   font-size: 18px;
@@ -147,5 +158,23 @@ body {
   .contact .right {
     margin: 5px;
     padding: 5px;
+  }
+}
+.contact .arrowTop {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  cursor: pointer;
+  transition: 1s all ease;
+}
+.contact .arrowTop :hover {
+  scale: 1.1;
+}
+.contact .arrowTop .icon {
+  animation: arrowBlink 2s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=contact.css.map */
