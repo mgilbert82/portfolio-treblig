@@ -3,7 +3,7 @@ import "./menu.scss";
 import { PiHouseFill } from "react-icons/pi";
 import { TbUserQuestion } from "react-icons/tb";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
-import { BiMailSend, BiMessageAltCheck } from "react-icons/bi";
+import { BiMailSend } from "react-icons/bi";
 import Footer from "../footer/Footer";
 
 export default function Menu({ open, setOpen }) {
