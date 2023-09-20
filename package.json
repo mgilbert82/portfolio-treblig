@@ -4,10 +4,9 @@
   "private": true,
   "author": "Michel GILBERT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
