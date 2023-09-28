@@ -1,19 +1,16 @@
 $maincolor: #411207;
 $maincolor900: #722915;
 $maincolor700: #ab3d12;
-$maincolor500: #e98020;
 $maincolor300: #f2b757;
 $maincolor100: #fbeaca;
 $maincolor50: #fef7ec;
-$yellowcolor: #fce98b;
 $orangecolor: #d77f08;
 $graycolor50: #f7f7f7;
 $graycolor200: #d9d9d9;
 $graycolor400: #adadad;
-$graycolor600: #888888;
 $graycolor800: #676767;
 $graycolor950: #363636;
-$width: 768px;
+$width: 960px;
 
 @mixin mobile {
     @media (max-width: #{$width}) {
@@ -26,4 +23,5 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Advent Pro', sans-serif;
+    font-weight: 300;
 }

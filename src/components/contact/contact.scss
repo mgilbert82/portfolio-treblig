@@ -53,16 +53,16 @@
                 width: 300px;
                 height: 30px;
                 font-size: 16px;
-                background-color: $maincolor900;
+                background-color: $graycolor200;
                 border: none;
                 padding: 10px;
-                color: $maincolor50;
+                color: $maincolor;
                 font-family: "lato", sans-serif;
 
 
                 &::placeholder {
                     padding: 5px;
-                    color: $maincolor300;
+                    color: $maincolor;
                     font-family: "lato", sans-serif;
                     font-size: 18px;
                     font-weight: 300;
@@ -78,8 +78,8 @@
             }
 
             textarea {
-                background-color: $maincolor900;
-                color: $maincolor50;
+                background-color: $graycolor200;
+                color: $maincolor;
                 font-family: "lato", sans-serif;
                 width: 300px;
                 height: 300px;
@@ -89,7 +89,7 @@
 
                 &::placeholder {
                     padding: 5px;
-                    color: $maincolor300;
+                    color: $maincolor;
                     font-family: "lato", sans-serif;
                     font-size: 18px;
                     font-weight: 300;

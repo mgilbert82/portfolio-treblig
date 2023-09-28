@@ -95,13 +95,13 @@ export default function About() {
                 affiche, publicitaire,...)
               </span>
             </div>
+            <div className="ctaButton">
+              <a href="#contact" className="button">
+                <IoIosCafe size={20} color="#fbeaca" /> Me contacter
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="ctaButton">
-        <a href="#contact" className="button">
-          <IoIosCafe size={20} color="#fbeaca" /> Me contacter
-        </a>
       </div>
     </div>
   );

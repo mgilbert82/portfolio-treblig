@@ -23,31 +23,32 @@ export async function POST(req) {
           <p>My email is: ${data.email}</p>`,
   };
 
-  const verifyRecaptcha = async (token) => {
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
-    return await axios.post(url);
-  };
+  // const verifyRecaptcha = async (token) => {
+  //   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  //   const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
+  //   return await axios.post(url);
+  // };
 
   try {
+    await sgMail.send(msg);
     const res = await verifyRecaptcha(data.token);
     //console.log("verify", res);
-    if (res.data.success) {
-      await sgMail.send(msg);
-      //console.log(msg);
-      return NextResponse.json(
-        { status: 200 },
-        {
-          message: "This worked",
-          success: true,
-        }
-      );
-    } else {
-      return NextResponse.json({
-        message: "reCAPTCHA verification failed",
-        sucess: false,
-      });
-    }
+    // if (res.data.success) {
+    //   await sgMail.send(msg);
+    //   //console.log(msg);
+    //   return NextResponse.json(
+    //     { status: 200 },
+    //     {
+    //       message: "This worked",
+    //       success: true,
+    //     }
+    //   );
+    // } else {
+    //   return NextResponse.json({
+    //     message: "reCAPTCHA verification failed",
+    //     sucess: false,
+    //   });
+    // }
   } catch (error) {
     return NextResponse.json(
       { status: 400 },

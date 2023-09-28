@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./contact.scss";
 import MailSent from "../../../public/assets/images/website/mail-sent.png";
 import Image from "next/image";
 import { BsSend, BsArrowUpCircle } from "react-icons/bs";
 import Link from "next/link";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   // Form Variables
@@ -13,16 +13,16 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [token, setToken] = useState("");
+  // const [token, setToken] = useState("");
 
-  const recaptcha = useRef("");
+  // const recaptcha = useRef("");
 
   //recaptacha Submission
-  const handleCaptcha = async (token) => {
-    if (token) {
-      setToken(token);
-    }
-  };
+  // const handleCaptcha = async (token) => {
+  //   if (token) {
+  //     setToken(token);
+  //   }
+  // };
   // Submit the form
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ export default function Contact() {
           headers: {
             "content-type": "application/json",
           },
-          body: JSON.stringify({ username, email, message, token }),
+          body: JSON.stringify({ username, email, message }),
         }
       );
       //console.log(res);
@@ -95,11 +95,11 @@ export default function Contact() {
                 required
                 aria-label="Message"
               ></textarea>
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 ref={recaptcha}
                 onChange={handleCaptcha}
-              />
+              /> */}
               <button type="submit">
                 Envoyer <BsSend className="icon" />
               </button>

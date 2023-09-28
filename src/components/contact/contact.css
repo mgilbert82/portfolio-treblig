@@ -12,7 +12,7 @@ body {
 .contact .left {
   flex: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .left {
     flex: 0;
   }
@@ -22,7 +22,7 @@ body {
   transition: 1s all ease;
   object-fit: contain;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .left img {
     display: none;
   }
@@ -38,7 +38,7 @@ body {
   font-size: 40px;
   color: #411207;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .right h2 {
     font-size: 30px;
   }
@@ -56,15 +56,15 @@ body {
   width: 300px;
   height: 30px;
   font-size: 16px;
-  background-color: #722915;
+  background-color: #d9d9d9;
   border: none;
   padding: 10px;
-  color: #fef7ec;
+  color: #411207;
   font-family: "lato", sans-serif;
 }
 .contact .right form input::placeholder {
   padding: 5px;
-  color: #f2b757;
+  color: #411207;
   font-family: "lato", sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -72,14 +72,14 @@ body {
 .contact .right form input:focus {
   outline: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .right form input {
     height: 20px;
   }
 }
 .contact .right form textarea {
-  background-color: #722915;
-  color: #fef7ec;
+  background-color: #d9d9d9;
+  color: #411207;
   font-family: "lato", sans-serif;
   width: 300px;
   height: 300px;
@@ -89,7 +89,7 @@ body {
 }
 .contact .right form textarea::placeholder {
   padding: 5px;
-  color: #f2b757;
+  color: #411207;
   font-family: "lato", sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -142,7 +142,7 @@ body {
 .contact .right form button .icon {
   color: #fef7ec;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .right form button {
     height: 40px;
   }
@@ -154,7 +154,7 @@ body {
   font-size: 24px;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact .right {
     margin: 5px;
     padding: 5px;
